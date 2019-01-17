@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <title>Адмін панель</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+</head>
+<body>
+
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Редагування</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input type="text" class="inputName form-control mb-2" placeholder="Name">
+                    <input type="text" class="inputLocation form-control mb-2" placeholder="Location">
+                    <input type="number" class="inputSpeed form-control mb-2" min="0" placeholder="Speed">
+                    <input type="color" class="inputColor form-color mb-2">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+                <button type="button" class="btn btn-primary save">Зберегти</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-block border m-1 p-2">
+    <div class="border d-block pb-3">
+        <table class="table table-bordered">
+            <thead class="bg-primary text-center text-white">
+            <tr>
+                <td colspan="2"><h3>Дод. інформація по свічу</h3></td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Описання:</td>
+                <td>DES-3200-26/C1 Fast Ethernet Switch</td>
+            </tr>
+            <tr>
+                <td>Положення:</td>
+                <td>Lesnoy_20_1par_2</td>
+            </tr>
+            <tr>
+                <td>Прошивка:</td>
+                <td>4.37.B013</td>
+            </tr>
+            <tr>
+                <td>Ревізія:</td>
+                <td>С1</td>
+            </tr>
+            <tr>
+                <td>IP:</td>
+                <td>10.11.71.93</td>
+            </tr>
+            <tr>
+                <td>MAC:</td>
+                <td>90:94:e4:20:35:80</td>
+            </tr>
+            <tr>
+                <td>hiVlan</td>
+                <td>3768</td>
+            </tr>
+            <tr>
+                <td>loVlan</td>
+                <td>3100</td>
+            </tr>
+            <tr>
+                <td>Адрес:</td>
+                <td><p>пр. Лесной 20 под. 1</p>
+                    <small class="text-secondary">світч #1</small>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <a href="#" class="btn btn-light col-md-12 bordered btn-outline-secondary">Редагувати світч</a>
+    </div>
+
+    <fieldset class="group-border border pb-4 mb-1">
+        <legend class="col-md-1">Керування:</legend>
+        <div class="button-group btn-group-vertical col-md-12">
+            <button class="btn btn-light btn-outline-secondary">Перезагрузити</button>
+            <button class="btn btn-light btn-outline-secondary">Пропінгувати</button>
+            <button class="btn btn-light btn-outline-secondary">MAC-Адреса з потрів</button>
+            <button class="btn btn-light btn-outline-secondary">Місцеположення свіча</button>
+            <button class="btn btn-light btn-outline-secondary">Консоль телнет</button>
+            <button class="btn btn-light btn-outline-danger">Вигнати всіх ...</button>
+        </div>
+    </fieldset>
+    <h4 class="bg-primary text-white text-center">D-Link DES-3200-26</h4>
+    <h5 class="bg-primary text-white text-center">Вільні порти:</h5>
+    <div class="row m-0">
+        <div class="col p-2" style="min-width: 400px">
+            <div class="row m-0">
+                <div class="p-3 d-flex align-items-center edit btn color">1</div>
+                <div class="col">
+                    <div class="text-primary"><span class="name">Шишко Василий Николаевич (8296)</span>
+                        <small class="text-secondary d-block location">пр. Лесной 20, кв. 96</small>
+                    </div>
+                    <div>
+                        <span><span class="speed">100</span> Mbs</span>
+                        <button class="btn btn-light btn-outline-secondary col-md-12">Викл.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col p-2" style="min-width: 400px">
+            <div class="row m-0">
+                <div class="p-3 d-flex align-items-center edit btn color">1</div>
+                <div class="col">
+                    <div class="text-primary"><span class="name">Шишко Василий Николаевич (8296)</span>
+                        <small class="text-secondary d-block location">пр. Лесной 20, кв. 96</small>
+                    </div>
+                    <div>
+                        <span><span class="speed">100</span> Mbs</span>
+                        <button class="btn btn-light btn-outline-secondary col-md-12">Викл.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col p-2" style="min-width: 400px">
+            <div class="row m-0">
+                <div class="p-3 d-flex align-items-center edit btn color">1</div>
+                <div class="col">
+                    <div class="text-primary"><span class="name">Шишко Василий Николаевич (8296)</span>
+                        <small class="text-secondary d-block location">пр. Лесной 20, кв. 96</small>
+                    </div>
+                    <div>
+                        <span><span class="speed">100</span> Mbs</span>
+                        <button class="btn btn-light btn-outline-secondary col-md-12">Викл.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col p-2" style="min-width: 400px">
+            <div class="row m-0">
+                <div class="p-3 d-flex align-items-center edit btn color">1</div>
+                <div class="col">
+                    <div class="text-primary"><span class="name">Шишко Василий Николаевич (8296)</span>
+                        <small class="text-secondary d-block location">пр. Лесной 20, кв. 96</small>
+                    </div>
+                    <div>
+                        <span><span class="text-danger speed">0</span> Mbs</span>
+                        <button class="btn btn-light btn-outline-secondary col-md-12">Вкл.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col p-2" style="min-width: 400px">
+            <div class="row m-0">
+                <div class="p-3 d-flex align-items-center edit btn color">1</div>
+                <div class="col">
+                    <div class="text-primary"><span class="name">Шишко Василий Николаевич (8296)</span>
+                        <small class="text-secondary d-block location">пр. Лесной 20, кв. 96</small>
+                    </div>
+                    <div>
+                        <span><span class="speed">100</span> Mbs</span>
+                        <button class="btn btn-light btn-outline-secondary col-md-12">Викл.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col p-2" style="min-width: 400px">
+            <div class="row m-0">
+                <div class="p-3 d-flex align-items-center edit btn color">1</div>
+                <div class="col">
+                    <div class="text-primary"><span class="name">Шишко Василий Николаевич (8296)</span>
+                        <small class="text-secondary d-block location">пр. Лесной 20, кв. 96</small>
+                    </div>
+                    <div>
+                        <span><span class="speed">100</span> Mbs</span>
+                        <button class="btn btn-light btn-outline-secondary col-md-12">Викл.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col p-2" style="min-width: 400px">
+            <div class="row m-0">
+                <div class="p-3 d-flex align-items-center edit btn color">1</div>
+                <div class="col">
+                    <div class="text-primary"><span class="name">Шишко Василий Николаевич (8296)</span>
+                        <small class="text-secondary d-block location">пр. Лесной 20, кв. 96</small>
+                    </div>
+                    <div>
+                        <span><span class="speed">100</span> Mbs</span>
+                        <button class="btn btn-light btn-outline-secondary col-md-12">Викл.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col p-2" style="min-width: 400px">
+            <div class="row m-0">
+                <div class="p-3 d-flex align-items-center edit btn color">1</div>
+                <div class="col">
+                    <div class="text-primary"><span class="name">Шишко Василий Николаевич (8296)</span>
+                        <small class="text-secondary d-block location">пр. Лесной 20, кв. 96</small>
+                    </div>
+                    <div>
+                        <span><span class="speed">100</span> Mbs</span>
+                        <button class="btn btn-light btn-outline-secondary col-md-12">Викл.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col p-2" style="min-width: 400px">
+            <div class="row m-0">
+                <div class="p-3 d-flex align-items-center edit btn color">1</div>
+                <div class="col">
+                    <div class="text-primary"><span class="name">Шишко Василий Николаевич (8296)</span>
+                        <small class="text-secondary d-block location">пр. Лесной 20, кв. 96</small>
+                    </div>
+                    <div>
+                        <span><span class="speed">100</span> Mbs</span>
+                        <button class="btn btn-light btn-outline-secondary col-md-12">Викл.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col p-2" style="min-width: 400px">
+            <div class="row m-0">
+                <div class="p-3 d-flex align-items-center edit btn color">1</div>
+                <div class="col">
+                    <div class="text-primary"><span class="name">Шишко Василий Николаевич (8296)</span>
+                        <small class="text-secondary d-block location">пр. Лесной 20, кв. 96</small>
+                    </div>
+                    <div>
+                        <span><span class="speed">100</span> Mbs</span>
+                        <button class="btn btn-light btn-outline-secondary col-md-12">Викл.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col p-2" style="min-width: 400px">
+            <div class="row m-0">
+                <div class="p-3 d-flex align-items-center edit btn color">1</div>
+                <div class="col">
+                    <div class="text-primary"><span class="name">Шишко Василий Николаевич (8296)</span>
+                        <small class="text-secondary d-block location">пр. Лесной 20, кв. 96</small>
+                    </div>
+                    <div>
+                        <span><span class="speed">100</span> Mbs</span>
+                        <button class="btn btn-light btn-outline-secondary col-md-12">Викл.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col p-2" style="min-width: 400px">
+            <div class="row m-0">
+                <div class="p-3 d-flex align-items-center edit btn color">1</div>
+                <div class="col">
+                    <div class="text-primary"><span class="name">Шишко Василий Николаевич (8296)</span>
+                        <small class="text-secondary d-block location">пр. Лесной 20, кв. 96</small>
+                    </div>
+                    <div>
+                        <span><span class="speed">100</span> Mbs</span>
+                        <button class="btn btn-light btn-outline-secondary col-md-12">Викл.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col p-2" style="min-width: 400px">
+            <div class="row m-0">
+                <div class="p-3 d-flex align-items-center edit btn color">1</div>
+                <div class="col">
+                    <div class="text-primary"><span class="name">Шишко Василий Николаевич (8296)</span>
+                        <small class="text-secondary d-block location">пр. Лесной 20, кв. 96</small>
+                    </div>
+                    <div>
+                        <span><span class="speed">100</span> Mbs</span>
+                        <button class="btn btn-light btn-outline-secondary col-md-12">Викл.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-md-12 col-xl-6 p-2">
+            <div class="row m-0">
+                <div class="p-3 d-flex align-items-center bg-success">1</div>
+                <div class="col">
+                    <div class="bg-success">
+                        <p>UP Link</p>
+                        <span>1000 Mbps</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-xl-6 p-2">
+            <div class="row m-0 bg-secondary">
+                <p class="mt-4"><strong class="ml-2">UpTime: </strong> 130 days, 03:59:18.00</p>
+            </div>
+        </div>
+    </div>
+</div>
